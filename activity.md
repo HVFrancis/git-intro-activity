@@ -84,14 +84,14 @@ Run the following commands.
 1.  What does `git help` do?
 
     ```
-
+    lists and explains commands that git uses
 
     ```
 
 2.  What does `-ag` cause `git help` to do?
 
     ```
-
+    provides subcommands and some concepts guides (a = all, g = guides)
 
 
     ```
@@ -114,14 +114,14 @@ consider changing this configuration before you walk away.
 1.  What are these commands doing?
 
     ```
-
-
+   assigning identifying information to a config file (but how would a student know?)
 
     ```
 
 2.  What is the purpose of `--global`?
 
     ```
+    assigns the change to the global config file
 
 
 
@@ -141,14 +141,14 @@ cd first_project
     display a hidden file?
 
     ```
-
+    ls -a    
 
     ```
 
 2. Run this command to show the hidden files in the current directory. Are there any?
 
     ```
-
+    it shows . (current directory) and .. (parent directory)
 
 
     ```
@@ -163,27 +163,28 @@ cd first_project
 4. Check for hidden files again.  What was created by `git init`?
 
     ```
+    .git
 
 
 
     ```
 
 
-3.  What do you think would happen if you delete `.git`?
+5.  What do you think would happen if you delete `.git`?
+
+    ```
+    It wouldn't be a git repository any more.
+
 
     ```
 
-
-
-    ```
-
-4.  Using your observations to the previous questions, answer the following.
+6.  Using your observations to the previous questions, answer the following.
     You find an old project on your hard drive. You do not remember if
     it is a under version control. What could you look for to determine
     if the project is being managed using git?
 
     ```
-
+    do ls -a and see if .git is there
 
 
     ```
@@ -203,7 +204,7 @@ Run `git status` before and after each of these commands.
 1.  What kind of information does `git status` report?
 
     ```
-
+    it shows us what files have been changed and/or added for consideration for staging
 
 
     ```
@@ -211,6 +212,7 @@ Run `git status` before and after each of these commands.
 2.  What does `git add names.txt` do?
 
     ```
+    tells git it's a file i would to add to the repository
 
 
 
@@ -219,7 +221,7 @@ Run `git status` before and after each of these commands.
 3.  What does `git commit -m "Add our names."` do?
 
     ```
-
+    makes the change official
 
 
     ```
@@ -240,7 +242,7 @@ Run `git status` before and after each of these commands.
 4.  What does `git add .` do? What do you think `.` means?
 
     ```
-
+    it added all the changed files for staging
 
 
     ```
@@ -248,6 +250,7 @@ Run `git status` before and after each of these commands.
 5.  What does `git commit` (without -m) do?
 
     ```
+    opens a window for typing in the message
 
 
 
@@ -257,7 +260,7 @@ Run `git status` before and after each of these commands.
     good practice) what command would you use?
 
     ```
-
+    git commit (and type the message in the editor window)
 
 
     ```
@@ -265,7 +268,7 @@ Run `git status` before and after each of these commands.
 7.  What does `git log do`?
 
     ```
-
+    shows a history of all the commits
 
 
     ```
@@ -297,13 +300,14 @@ Run the following commands:
 
     ```
 
-
+    names.txt
 
     ```
 
     **Unstaged**
 
     ```
+    movies.txt
 
 
 
@@ -313,7 +317,7 @@ Run the following commands:
 
     ```
 
-
+    foods.txt
 
     ```
 
@@ -322,7 +326,7 @@ Run the following commands:
 
     ```
 
-
+    just the one for names.txt
 
     ```
 
@@ -330,14 +334,14 @@ Run the following commands:
 
     ```
 
-
+    git add
 
     ```
 
 3.  What command do you run to unstage changes?
 
     ```
-
+    git reset
 
 
     ```
@@ -350,7 +354,7 @@ Run the following commands:
 1.  What does `git diff` display?
 
     ```
-
+    it shows the differences in files that have not been staged
 
 
     ```
@@ -358,7 +362,7 @@ Run the following commands:
 2.  What does `git diff --cached` display?
 
     ```
-
+    shows the differences in files that are staged
 
 
     ```
@@ -368,7 +372,8 @@ Run the following commands:
     confirm they worked.
 
     ```
-
+    git rm names.txt
+    git add movies.txt
 
 
     ```
@@ -378,7 +383,7 @@ Run the following commands:
     going on.
 
     ```
-
+    the previous change is still there, but now there's a new change to stage
 
 
     ```
@@ -387,7 +392,7 @@ Run the following commands:
     Explain what you think is going on.
 
     ```
-
+    I haven't staged the the fact that names.txt is gone
 
 
     ```
@@ -396,7 +401,7 @@ Run the following commands:
     and explain.
 
     ```
-
+    it doesn't see movies.txt, so it assumes it's deleted, and last-movies.txt is a new file not being tracked
 
 
     ```
@@ -406,7 +411,11 @@ Run the following commands:
     Execute them.
 
     ```
-
+    git add foods.txt
+    git add last-movies.txt
+    git rm movies.txt
+    git rm names.txt
+    git commit -m"seeing the result of adding/moving/deleting files"
 
 
     ```
@@ -415,7 +424,7 @@ Run the following commands:
     same thing. What does it hold?
 
     ```
-
+    files that we have changed and want to have modified in the repository
 
 
     ```
@@ -424,7 +433,7 @@ Run the following commands:
     commit?
 
     ```
-
+    some of the files changed might have been for internal use/testing/etc and not a real change to the project
 
 
     ```
@@ -443,7 +452,7 @@ Run the following commands:
 1.  What does `git reset --soft ``"HEAD^" `do?
 
     ```
-
+   removed some of the commits (not sure how it decided what "HEAD^" is)
 
 
     ```
@@ -460,7 +469,7 @@ Run the following commands:
 1.  What does `git reset --hard ``"HEAD^"`` `do?
 
     ```
-
+    
 
 
     ```
